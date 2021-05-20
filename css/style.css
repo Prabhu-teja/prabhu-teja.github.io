@@ -34,11 +34,14 @@ body div{
 .welcome .titles{
     color: rgba(255,255,255,.3);
 }
-.btn.btn-light.resume{
-    min-width: 20%;
+.btn.btn-light.hire{
+    min-width: 15%;
     border-radius: 25px !important;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
 }
-.btn.btn-light.resume:hover{
+.btn.btn-light.hire:hover{
     color: black !important;
 }
 .btn.btn-light:focus{
@@ -130,12 +133,37 @@ body div{
     display: flex;
     justify-content: center;
     padding: 20px;
+    padding-bottom: 100px !important;
 }
 .icon:hover{
     transform: scale(1.2);
 }
 .icon:focus{
     box-shadow: none !important;
+}
+.formDiv{
+    width: 100%;
+}
+#contactForm{
+    display: none;
+    color: black;
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    width: 30%;
+    background: #232323;
+    padding: 25px;
+}
+#contactForm input:focus{
+    background: rgba(233,233,233,1);
+    color: black;
+}
+#message{
+    height: 250px;
+    color: black;
+}
+.active-blur{
+    filter: blur(5px);
 }
 @media only screen and (max-width: 768px) {
     .project{
@@ -156,5 +184,14 @@ body div{
     .skill{
         margin: 10px 0px;
         width: 100%;
+    }
+    .formDiv{
+        display: flex;
+        justify-content: center;
+    }
+    #contactForm{
+        width: 90%;
+        position: fixed;
+        right: unset;
     }
 }
