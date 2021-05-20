@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="welcome">
+    <div class="welcome blur">
         <div class="details">
             <div class="display-3 name">
                 Prabhu Teja Patel
@@ -19,10 +19,10 @@
             <div class="display-5 titles">
                 Web Developer and Tech Enthusiast
             </div>
-            <a class="btn btn-light my-3 py-2 resume" href="https://mail.google.com/mail/?view=cm&fs=1&to=patelprabhuteja@gmail.com&su=Hiring&body=" target="_blank">Wanna Hire?</a>
+            <button class="btn btn-light my-3 py-2 hire" id="hire">Wanna Hire?</button>
         </div>
     </div>
-    <div class="projects">
+    <div class="projects blur">
         <div class="projectsDiv">
             <div class="project">
                 <div class="project-det">
@@ -34,11 +34,11 @@
                         Hospital Inventory Management was developed to serve the needs of people who are in search of Hospitals and Ventilators. Here admin can fetch details of Hospitals and ventilators by their name and status respectively. Admin can also add, delete, update status of Ventilators by their ID's.
                     </div>
                     <div class="project-links">
-                        <a class="btn project-btn" target="_blank" href="https://github.com/prabhu-teja/Hospital-Mngmt"> <img src="https://img.icons8.com/metro/25/ffffff/github.png"/> Github Code</a>
+                        <a class="btn project-btn" target="_blank" href="https://github.com/patelprabhuteja/Hospital-Mngmt"> <img src="https://img.icons8.com/metro/25/ffffff/github.png"/> Github Code</a>
                     </div>
                 </div>
                 <div class="project-img">
-                    <img class="img-thumbnail img" alt="project-1" src="img/project-1.jpg"/>
+                    <a href="img/project-1.jpg" target="_blank"><img class="img-thumbnail img" alt="project-1" src="img/project-1.jpg"/></a>
                 </div>
             </div>
             <div class="project">
@@ -50,11 +50,11 @@
                         &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; Chatbot was developed to register the issues of the users into the Database. As the DialogFlow uses Natural Language Processing, it will be easier to understand the user queries. As the user enters his/her mobile number, Chatbot verifies the user whether he/she is registered or not. If registered, issue entered by the user will be stored into the Database and a trouble ticket ID will be generated so that the user can check the status of the issue some other time. If a user is not registerd, he/she can register by entering his/her name and mobile number.
                     </div>
                     <div class="project-links">
-                        <a class="btn project-btn" target="_blank" href="https://github.com/prabhu-teja/ServiceBot"> <img src="https://img.icons8.com/metro/25/ffffff/github.png"/> Github Code</a>
+                        <a class="btn project-btn" target="_blank" href="https://github.com/patelprabhuteja/ServiceBot"> <img src="https://img.icons8.com/metro/25/ffffff/github.png"/> Github Code</a>
                     </div>
                 </div>
                 <div class="project-img">
-                    <img class="img-thumbnail img" alt="project-2" src="img/project-2.jpg"/>
+                    <a href="img/project-2.jpg" target="_blank"><img class="img-thumbnail img" alt="project-2" src="img/project-2.jpg"/></a>
                 </div>
             </div>
             <div class="project">
@@ -67,16 +67,32 @@
                         Library Management System was developed by serving API's like add, edit, delete Book Details from the Database. User can check the stock of a book available. User can also download this details in the various formats like PDF, Excel, JSON, print.
                     </div>
                     <div class="project-links">
-                        <a class="btn project-btn" target="_blank" href="https://github.com/prabhu-teja/library-inventory"> <img src="https://img.icons8.com/metro/25/ffffff/github.png"/> Github Code</a>
+                        <a class="btn project-btn" target="_blank" href="https://github.com/patelprabhuteja/library-inventory"> <img src="https://img.icons8.com/metro/25/ffffff/github.png"/> Github Code</a>
                     </div>
                 </div>
                 <div class="project-img">
-                    <img class="img-thumbnail img" alt="project-3" src="img/project-3.png"/>
+                    <a href="img/project-3.png" target="_blank"><img class="img-thumbnail img" alt="project-3" src="img/project-3.png"/></a>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-det">
+                    <div class="project-title display-5">
+                        Real time Chat Application using Node.JS and Socket.IO
+                    </div>
+                    <div class="project-desc">
+                        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; The purpose of the chat application is to allow users be able to the chat with each other, like a normal chat application. The users will be able to chat with each other, only group chatting has been developed.
+                    </div>
+                    <div class="project-links">
+                        <a class="btn project-btn" target="_blank" href="https://chatapp-prabhu.glitch.me/"> <img src="https://img.icons8.com/metro/25/ffffff/eye.png"/> Live Page </a>
+                    </div>
+                </div>
+                <div class="project-img">
+                    <a href="img/project-4.png" target="_blank"><img class="img-thumbnail img" alt="project-4" src="img/project-4.png"/></a>
                 </div>
             </div>
         </div>    
     </div>
-    <div class="skills">
+    <div class="skills blur">
         <div class="skillsDiv">
             <div class="heading display-3">Skills</div>
             <div class="skillSet">
@@ -93,29 +109,48 @@
             </div>
         </div>
     </div>
-    <footer class="footer">
-        <a class="icon btn" href="https://github.com/prabhu-teja/" target="_blank">
+    <div class="formDiv">
+        <form action="https://prabhumailbot.glitch.me/" method="POST" id="contactForm" autocomplete="off" spellcheck="false">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="name" name="name" placeholder="John Doe"/>
+                <label for="name">Name</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="email" name="email" placeholder="johndoe@gmail.com"/>
+                <label for="email">Email</label>
+            </div>
+            <div class="form-floating mb-3">
+                <textarea type="text" class="form-control" id="message" name="message" placeholder="Enter your Message Here." required></textarea>
+                <label for="message">Message</label>
+            </div>
+            <div class="d-flex mt-4">
+                <button type="submit" class="btn btn-success w-25">Send</button>
+                <button type="button" id="cancelBtn" class="ml-auto btn btn-danger w-25">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <footer class="footer blur">
+        <a class="icon btn" href="https://github.com/patelprabhuteja/" target="_blank">
             <img src="https://img.icons8.com/windows/32/ffffff/github.png" alt="Github"/>
         </a>
-        <a class="icon btn" href="https://www.linkedin.com/in/prabhuteja7/" target="_blank">
+        <a class="icon btn" href="https://www.linkedin.com/in/patelprabhuteja/" target="_blank">
             <img src="https://img.icons8.com/windows/32/ffffff/linkedin.png" alt="Linkedin"/>
         </a>
         <a class="icon btn" href="https://www.hackerrank.com/prabhuteja7" target="_blank">
             <img src="https://img.icons8.com/windows/32/ffffff/hackerrank.png" alt="Hackerrank"/>
         </a>
         </a>
-        <a class="icon btn" href="https://twitter.com/prabhu_teja4" target="_blank">
+        <a class="icon btn" href="https://twitter.com/patelprabhuteja" target="_blank">
             <img src="https://img.icons8.com/windows/32/ffffff/twitter.png" alt="Twitter"/>
         </a>
-        <a class="icon btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=patelprabhuteja@gmail.com&su=Hello&body=Hello">
+        <a class="icon btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=patelprabhuteja@gmail.com&su=Hello&body=Hello" target="_blank">
             <img src="https://img.icons8.com/windows/32/ffffff/gmail.png" alt="Mail"/>
         </a>
-        <a class="icon btn" href="https://dev.to/patelprabhuteja">
+        <a class="icon btn" href="https://dev.to/patelprabhuteja" target="_blank">
             <img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Patel Prabhu Teja's DEV Community Profile" height="30" width="30">
         </a>
         
     </footer>
     <script src="js/script.js"></script>
-    <script src="https://kit.fontawesome.com/23ee58b93c.js" crossorigin="anonymous"></script>
 </body>
 </html>
