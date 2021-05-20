@@ -95,6 +95,7 @@ body div{
 .img-thumbnail{
     width: 460.8px;
     height: 310.52px !important;
+    background-color: unset !important;
 }
 .skills,.contact{
     min-height: 100vh;
